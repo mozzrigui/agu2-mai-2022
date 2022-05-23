@@ -3,6 +3,7 @@ button {
 
   border: 0.1em solid #eee;
   background-color: #eee;
+  border-radius: $border-radius;
 
   &:not(:disabled) {
     cursor: pointer;
