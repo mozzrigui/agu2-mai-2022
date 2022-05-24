@@ -40,5 +40,7 @@ export class StockComponent implements OnInit {
 
   async remove() {
     console.log('remove');
+    await this.articleService.remove(this.selectedArticles);
+    this.selectedArticles.clear();
   }
 }

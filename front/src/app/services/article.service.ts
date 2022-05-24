@@ -47,4 +47,9 @@ export class ArticleService {
   refresh() {
     this.articles = this.getArticle();
   }
+
+  async remove(selectedArticles: Set<Article>) {
+    this.articles = this.articles.filter((a) => !selectedArticles.has(a));
+    this.save();
+  }
 }
