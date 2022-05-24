@@ -43,4 +43,8 @@ export class ArticleService {
   save() {
     localStorage.setItem(ARTICLE_KEY, JSON.stringify(this.articles));
   }
+
+  refresh() {
+    this.articles = this.getArticle();
+  }
 }

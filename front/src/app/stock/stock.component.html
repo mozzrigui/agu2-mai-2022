@@ -2,13 +2,13 @@
   <h1>Listes des articles</h1>
   <div class="content">
     <nav>
-      <button title="Rafraichir">
+      <button title="Rafraichir" (click)="refresh()">
         <fa-icon [icon]="faRotateRight"></fa-icon>
       </button>
       <button title="Ajouter" routerLink="add">
         <fa-icon [icon]="faPlus"></fa-icon>
       </button>
-      <button title="Supprimer">
+      <button title="Supprimer" [hidden]="selectedArticles.size === 0">
         <fa-icon [icon]="faTrashCan"></fa-icon>
       </button>
     </nav>
@@ -21,7 +21,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let a of articleService.articles" class="selected">
+        <tr
+          *ngFor="let a of articleService.articles"
+          (click)="toogle(a)"
+          [class.selected]="selectedArticles.has(a)"
+        >
           <td class="name">{{ a.name }}</td>
           <td class="price">{{ a.price }}</td>
           <td class="qty">{{ a.qty }}</td>
