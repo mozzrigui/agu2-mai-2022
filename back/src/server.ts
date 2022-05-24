@@ -1,6 +1,6 @@
+import cors from "cors";
 import express from "express";
 import serveIndex from "serve-index";
-import cors from "cors";
 
 const app = express();
 const port = 3000;
@@ -13,10 +13,6 @@ app.use(
 app.use((req, res, next) => {
   console.log("req: ", req.url);
   next();
-});
-
-app.get("/api/date", (req, res) => {
-  res.json({ date: new Date() });
 });
 
 app.use(express.static("."));
