@@ -5,6 +5,7 @@ import {
   faPlus,
   faTrashCan,
 } from '@fortawesome/free-solid-svg-icons';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-stock',
