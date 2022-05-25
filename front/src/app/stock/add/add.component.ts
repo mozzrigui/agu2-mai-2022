@@ -1,7 +1,7 @@
-import { compileNgModuleDeclarationExpression } from '@angular/compiler/src/render3/r3_module_compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Article } from 'src/app/interfaces/article';
 import { ArticleService } from 'src/app/services/article.service';
 
@@ -11,6 +11,7 @@ import { ArticleService } from 'src/app/services/article.service';
   styleUrls: ['./add.component.scss'],
 })
 export class AddComponent implements OnInit {
+  faPlus = faPlus;
   f = new FormGroup({
     name: new FormControl('Tournevis', [
       Validators.required,
