@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { WidgetsModule } from '../widgets/widgets.module';
 import { StockComponent } from './stock.component';
 
 describe('StockComponent', () => {
@@ -8,9 +8,9 @@ describe('StockComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StockComponent ]
-    })
-    .compileComponents();
+      imports: [WidgetsModule],
+      declarations: [StockComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

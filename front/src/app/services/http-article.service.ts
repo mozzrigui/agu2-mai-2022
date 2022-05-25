@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { delay, lastValueFrom } from 'rxjs';
 import { Article } from '../interfaces/article';
 import { ArticleService } from './article.service';
-const ARTICLES_URL = 'http://localhost:3000/api/articles';
+export const ARTICLES_URL = 'http://localhost:3000/api/articles';
 
 @Injectable({
   providedIn: 'root',
