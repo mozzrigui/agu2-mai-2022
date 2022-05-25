@@ -14,7 +14,10 @@
       <input type="text" formControlName="qty" />
     </label>
     <button class="primary">
-      <fa-icon [icon]="faPlus"></fa-icon>
+      <fa-icon
+        [icon]="isAdding ? faSpinner : faPlus"
+        [spin]="isAdding"
+      ></fa-icon>
       Ajouter
     </button>
   </form>
